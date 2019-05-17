@@ -8,7 +8,7 @@
 
 这是蘑菇街中应用的一种页面间调用的方式，通过在启动时注册组件提供的服务，把调用组件使用的`url`和组件提供的服务`block`对应起来，保存到内存中。在使用组件的服务时，通过`url`找到对应的`block`，然后获取服务。
 
-![架构图](Chapter1/iOS组件化方案对比/url_block.png)
+![架构图](https://github.com/PlatoJobs/Book/blob/master/Chapter1/iOS组件化方案对比/url_block.png)
 
 ##### **注册：**
 
@@ -46,7 +46,7 @@
 
 > 也就是上述方案的改进方案,就是通过protocol定义服务接口，组件通过实现该接口来提供接口定义的服务，具体实现就是把protocol和class做一个映射，同时在内存中保存一张映射表，使用的时候，就通过protocol找到对应的class来获取需要的服务。
 
-![架构图](Chapter1/iOS组件化方案对比/protocol.png)
+![架构图](https://github.com/PlatoJobs/Book/blob/master/Chapter1/iOS组件化方案对比/protocol.png)
 
 ##### 注册:
 
@@ -80,7 +80,7 @@
 
 > [[LDBusMediator](https://github.com/Lede-Inc/LDBusMediator.git)]的组件化方案，它是通过组件实现公共协议的服务，来对外提供服务。具体就是通过单例来维护url-controller的映射关系表，根据调用者的url，以及提供的参数（字典类型，所以参数类型不受约束）来返回对应的controller来提供服务；同时，为了增强组件提供服务的多样性，又通过服务协议定义了其它的服务。
 
-![架构图](Chapter1/iOS组件化方案对比/url_vc.png)
+![架构图](https://github.com/PlatoJobs/Book/blob/master/Chapter1/iOS组件化方案对比/url_vc.png)
 
 **优点：**
 
@@ -98,7 +98,7 @@
 
 > 通过给组件包装一层`wrapper`来给外界提供服务，然后调用者通过依赖中间件来使用服务；其中，中间件是通过`runtime`来调用组件的服务，是真正意义上的解耦，也是该方案最核心的地方。具体实施过程是给组件封装一层`target`对象来对外提供服务，不会对原来组件造成入侵；然后，通过实现中间件的`category`来提供服务给调用者，这样使用者只需要依赖中间件，而组件则不需要依赖中间件。
 
-![架构图](Chapter1/iOS组件化方案对比/taget_action.png)
+![架构图](https://github.com/PlatoJobs/Book/blob/master/Chapter1/iOS组件化方案对比/taget_action.png)
 
 **优点：**
 
