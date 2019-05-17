@@ -278,6 +278,149 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x7B2C;1&#x8282;&#xFF1A;ios&#x7EC4;&#x4EF6;&#x5316;&#x65B9;&#x6848;&#x5BF9;&#x6BD4;">&#x7B2C;1&#x8282;&#xFF1A;iOS&#x7EC4;&#x4EF6;&#x5316;&#x65B9;&#x6848;&#x5BF9;&#x6BD4;</h1>
+<blockquote>
+<p>&#x9879;&#x76EE;&#x7ECF;&#x8FC7;&#x7EC4;&#x4EF6;&#x5316;&#x7684;&#x62C6;&#x5206;&#xFF0C;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x4EE3;&#x7801;&#x8026;&#x5408;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x589E;&#x5F3A;&#x4EE3;&#x7801;&#x7684;&#x590D;&#x7528;&#x6027;&#xFF0C;&#x5DE5;&#x7A0B;&#x7684;&#x6613;&#x7BA1;&#x7406;&#x6027;&#x7B49;&#x7B49;&#x3002;</p>
+</blockquote>
+<h4 id="&#x5E02;&#x9762;&#x4E0A;&#x7684;&#x65B9;&#x6848;">&#x5E02;&#x9762;&#x4E0A;&#x7684;&#x65B9;&#x6848;</h4>
+<h4 id="&#x65B9;&#x6848;&#x4E00;&#xFF1A;url-block">&#x65B9;&#x6848;&#x4E00;&#xFF1A;<strong>url-block</strong></h4>
+<p>&#x8FD9;&#x662F;&#x8611;&#x83C7;&#x8857;&#x4E2D;&#x5E94;&#x7528;&#x7684;&#x4E00;&#x79CD;&#x9875;&#x9762;&#x95F4;&#x8C03;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7;&#x5728;&#x542F;&#x52A8;&#x65F6;&#x6CE8;&#x518C;&#x7EC4;&#x4EF6;&#x63D0;&#x4F9B;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x628A;&#x8C03;&#x7528;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;&#x7684;<code>url</code>&#x548C;&#x7EC4;&#x4EF6;&#x63D0;&#x4F9B;&#x7684;&#x670D;&#x52A1;<code>block</code>&#x5BF9;&#x5E94;&#x8D77;&#x6765;&#xFF0C;&#x4FDD;&#x5B58;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#x3002;&#x5728;&#x4F7F;&#x7528;&#x7EC4;&#x4EF6;&#x7684;&#x670D;&#x52A1;&#x65F6;&#xFF0C;&#x901A;&#x8FC7;<code>url</code>&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;<code>block</code>&#xFF0C;&#x7136;&#x540E;&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x3002;</p>
+<p><img src="Chapter1/iOS&#x7EC4;&#x4EF6;&#x5316;&#x65B9;&#x6848;&#x5BF9;&#x6BD4;/url_block.png" alt="&#x67B6;&#x6784;&#x56FE;"></p>
+<h5 id="&#x6CE8;&#x518C;&#xFF1A;"><strong>&#x6CE8;&#x518C;&#xFF1A;</strong></h5>
+<pre><code class="lang-objc">[MGJRouter registerURLPattern:<span class="hljs-string">@&quot;mgj://detail?id=:id&quot;</span> toHandler:^(<span class="hljs-built_in">NSDictionary</span> *routerParameters) {
+   <span class="hljs-built_in">NSNumber</span> *<span class="hljs-keyword">id</span> = routerParameters[<span class="hljs-string">@&quot;id&quot;</span>];
+   <span class="hljs-comment">// create view controller with id</span>
+   <span class="hljs-comment">// push view controller</span>
+}];
+</code></pre>
+<p><strong>&#x8C03;&#x7528;</strong></p>
+<pre><code class="lang-objc">[MGJRouter openURL:<span class="hljs-string">@&quot;mgj://detail?id=404&quot;</span>]
+</code></pre>
+<h5 id="&#x4F18;&#x70B9;">&#x4F18;&#x70B9;:</h5>
+<ol>
+<li>h5&#x5916;&#x8DF3;&#x5230;&#x8611;&#x83C7;&#x8857;app&#xFF0C;app&#x5185;&#x90E8;&#x7684;h5&#x548C;app&#x7684;&#x539F;&#x751F;&#x4EA4;&#x4E92;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x5B9A;&#x4E49;&#x597D;&#x7684;&#x8DEF;&#x7531;&#x3002;</li>
+<li>&#x8611;&#x83C7;&#x8857;&#x4E3A;&#x4E86;&#x7EDF;&#x4E00;iOS&#x548C;Android&#x7684;&#x5E73;&#x53F0;&#x5DEE;&#x5F02;&#x6027;&#xFF0C;&#x4E13;&#x95E8;&#x7528;&#x540E;&#x53F0;&#x6765;&#x7BA1;&#x7406;url&#xFF0C;&#x7136;&#x540E;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x5E73;&#x53F0;&#xFF0C;&#x751F;&#x6210;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x6765;&#x65B9;&#x4FBF;&#x4F7F;&#x7528;&#x3002;</li>
+</ol>
+<p><strong>&#x7F3A;&#x70B9;&#xFF1A;</strong></p>
+<ol>
+<li>&#x9700;&#x8981;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7EF4;&#x62A4;<code>url-block</code>&#x7684;&#x8868;&#xFF0C;&#x7EC4;&#x4EF6;&#x591A;&#x4E86;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x5185;&#x5B58;&#x95EE;&#x9898;&#x3002;</li>
+<li><code>url</code>&#x7684;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x53D7;&#x5230;&#x9650;&#x5236;&#xFF0C;&#x53EA;&#x80FD;&#x4F20;&#x9012;&#x5E38;&#x89C4;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x53C2;&#x6570;&#xFF0C;&#x65E0;&#x6CD5;&#x4F20;&#x9012;&#x975E;&#x5E38;&#x89C4;&#x53C2;&#x6570;&#xFF0C;&#x5982;<code>UIImage</code>&#x3001;<code>NSData</code>&#x7B49;&#x7C7B;&#x578B;&#x3002;</li>
+<li>&#x6CA1;&#x6709;&#x533A;&#x5206;&#x672C;&#x5730;&#x8C03;&#x7528;&#x548C;&#x8FDC;&#x7A0B;&#x8C03;&#x7528;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x8FDC;&#x7A0B;&#x8C03;&#x7528;&#xFF0C;&#x4F1A;&#x56E0;&#x4E3A;url&#x53C2;&#x6570;&#x53D7;&#x9650;&#xFF0C;&#x5BFC;&#x81F4;&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#x53D7;&#x9650;&#x3002;</li>
+<li>&#x7EC4;&#x4EF6;&#x672C;&#x8EAB;&#x4F9D;&#x8D56;&#x4E86;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x4E14;&#x5206;&#x6563;&#x6CE8;&#x518C;&#x4F7F;&#x7684;&#x8026;&#x5408;&#x8F83;&#x591A;&#x3002;</li>
+<li><code>url</code>&#x6CE8;&#x518C;&#x5BF9;&#x4E8E;&#x5B9E;&#x65BD;&#x7EC4;&#x4EF6;&#x5316;&#x662F;&#x5B8C;&#x5168;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x7684;&#xFF0C;&#x67E5;&#x627E; URL &#x7684;&#x5B9E;&#x73B0;&#x4E0D;&#x591F;&#x9AD8;&#x6548;&#x3002;</li>
+<li>&#x8DEF;&#x7531;&#x5199;&#x9519;&#x540E;&#x7F16;&#x8BD1;&#x6CA1;&#x95EE;&#x9898;&#xFF0C;&#x800C;&#x5B9E;&#x73B0;&#x8FD0;&#x884C;&#x5C31;&#x51FA;&#x95EE;&#x9898;&#x4E86;&#xFF0C;&#x4EE5;&#x540E;&#x7EF4;&#x62A4;&#x4E5F;&#x4E0D;&#x65B9;&#x4FBF;&#x3002;</li>
+</ol>
+<h4 id="&#x65B9;&#x6848;&#x4E8C;&#x3001;protocol-class">&#x65B9;&#x6848;&#x4E8C;&#x3001;<strong>protocol-class</strong></h4>
+<blockquote>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x4E0A;&#x8FF0;&#x65B9;&#x6848;&#x7684;&#x6539;&#x8FDB;&#x65B9;&#x6848;,&#x5C31;&#x662F;&#x901A;&#x8FC7;protocol&#x5B9A;&#x4E49;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#xFF0C;&#x7EC4;&#x4EF6;&#x901A;&#x8FC7;&#x5B9E;&#x73B0;&#x8BE5;&#x63A5;&#x53E3;&#x6765;&#x63D0;&#x4F9B;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x5C31;&#x662F;&#x628A;protocol&#x548C;class&#x505A;&#x4E00;&#x4E2A;&#x6620;&#x5C04;&#xFF0C;&#x540C;&#x65F6;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x4FDD;&#x5B58;&#x4E00;&#x5F20;&#x6620;&#x5C04;&#x8868;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x901A;&#x8FC7;protocol&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;class&#x6765;&#x83B7;&#x53D6;&#x9700;&#x8981;&#x7684;&#x670D;&#x52A1;&#x3002;</p>
+</blockquote>
+<p><img src="Chapter1/iOS&#x7EC4;&#x4EF6;&#x5316;&#x65B9;&#x6848;&#x5BF9;&#x6BD4;/protocol.png" alt="&#x67B6;&#x6784;&#x56FE;"></p>
+<h5 id="&#x6CE8;&#x518C;">&#x6CE8;&#x518C;:</h5>
+<pre><code class="lang-objc">[ModuleManager registerClass:ClassA forProtocol:ProtocolA]
+</code></pre>
+<h5 id="&#x8C03;&#x7528;&#xFF1A;">&#x8C03;&#x7528;&#xFF1A;</h5>
+<pre><code class="lang-objc">[ModuleManager classForProtocol:ProtocolA]
+</code></pre>
+<h5 id="&#x4F18;&#x70B9;&#xFF1A;">&#x4F18;&#x70B9;&#xFF1A;</h5>
+<ol>
+<li>&#x8611;&#x83C7;&#x8857;&#x7684;&#x8FD9;&#x79CD;&#x65B9;&#x6848;&#x786E;&#x5B9E;&#x89E3;&#x51B3;&#x4E86;&#x65B9;&#x6848;&#x4E00;&#x4E2D;&#x65E0;&#x6CD5;&#x4F20;&#x9012;&#x975E;&#x5E38;&#x89C4;&#x53C2;&#x6570;&#x7684;&#x95EE;&#x9898;&#x3002;</li>
+<li>&#x7EC4;&#x4EF6;&#x95F4;&#x7684;&#x8C03;&#x7528;&#x66F4;&#x4E3A;&#x65B9;&#x4FBF;&#x3002;</li>
+<li>&#x89E3;&#x8026;&#x4EE3;&#x7801;&#x91CF;&#x5C11;&#xFF0C;&#x5B9E;&#x73B0;&#x65B9;&#x4FBF;&#xFF0C;&#x4EE5;&#x540E;&#x7EF4;&#x62A4;&#x4E5F;&#x65B9;&#x4FBF;&#x3002;</li>
+<li>&#x534F;&#x8BAE;&#x65B9;&#x6CD5;&#x6539;&#x53D8;&#x540E;&#xFF0C;&#x7F16;&#x8BD1;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x907F;&#x514D;&#x4EE3;&#x7801;&#x4FEE;&#x6539;&#x9057;&#x6F0F;&#x3002;</li>
+<li>&#x534F;&#x8BAE;&#x65B9;&#x6CD5;&#x672A;&#x5B9E;&#x73B0;&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x62A5;&#x7F16;&#x8BD1;&#x8B66;&#x544A;&#x3002;</li>
+<li>&#x65B9;&#x6CD5;&#x67E5;&#x627E;&#x5BB9;&#x6613;&#xFF0C;&#x8C03;&#x7528;&#x9AD8;&#x6548;&#x3002;</li>
+</ol>
+<p><strong>&#x7F3A;&#x70B9;&#xFF1A;</strong></p>
+<ol>
+<li>&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x5206;&#x6563;&#x3002;</li>
+<li>&#x5185;&#x5B58;&#x4E2D;&#x7EF4;&#x62A4;&#x6620;&#x5C04;&#x8868;&#x3002;</li>
+<li>&#x534F;&#x8BAE;&#x65B9;&#x6CD5;&#x6709;&#x53EF;&#x80FD;&#x672A;&#x5B9E;&#x73B0;&#x3002;</li>
+<li>&#x5BF9;&#x7EC4;&#x4EF6;&#x534F;&#x8BAE;&#x9700;&#x8981;&#x6CE8;&#x518C;&#xFF0C;&#x4E0D;&#x6CE8;&#x518C;&#x5C31;&#x65E0;&#x6CD5;&#x8C03;&#x7528;&#x3002;</li>
+</ol>
+<h4 id="&#x65B9;&#x6848;&#x4E09;&#xFF1A;url-controller">&#x65B9;&#x6848;&#x4E09;&#xFF1A;<strong>url-controller</strong></h4>
+<blockquote>
+<p>[<a href="https://github.com/Lede-Inc/LDBusMediator.git" target="_blank">LDBusMediator</a>]&#x7684;&#x7EC4;&#x4EF6;&#x5316;&#x65B9;&#x6848;&#xFF0C;&#x5B83;&#x662F;&#x901A;&#x8FC7;&#x7EC4;&#x4EF6;&#x5B9E;&#x73B0;&#x516C;&#x5171;&#x534F;&#x8BAE;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x6765;&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x3002;&#x5177;&#x4F53;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x5355;&#x4F8B;&#x6765;&#x7EF4;&#x62A4;url-controller&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x8868;&#xFF0C;&#x6839;&#x636E;&#x8C03;&#x7528;&#x8005;&#x7684;url&#xFF0C;&#x4EE5;&#x53CA;&#x63D0;&#x4F9B;&#x7684;&#x53C2;&#x6570;&#xFF08;&#x5B57;&#x5178;&#x7C7B;&#x578B;&#xFF0C;&#x6240;&#x4EE5;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x4E0D;&#x53D7;&#x7EA6;&#x675F;&#xFF09;&#x6765;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7684;controller&#x6765;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#xFF1B;&#x540C;&#x65F6;&#xFF0C;&#x4E3A;&#x4E86;&#x589E;&#x5F3A;&#x7EC4;&#x4EF6;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x7684;&#x591A;&#x6837;&#x6027;&#xFF0C;&#x53C8;&#x901A;&#x8FC7;&#x670D;&#x52A1;&#x534F;&#x8BAE;&#x5B9A;&#x4E49;&#x4E86;&#x5176;&#x5B83;&#x7684;&#x670D;&#x52A1;&#x3002;</p>
+</blockquote>
+<p><img src="Chapter1/iOS&#x7EC4;&#x4EF6;&#x5316;&#x65B9;&#x6848;&#x5BF9;&#x6BD4;/url_vc.png" alt="&#x67B6;&#x6784;&#x56FE;"></p>
+<p><strong>&#x4F18;&#x70B9;&#xFF1A;</strong></p>
+<ol>
+<li><code>LDBusMediator</code>&#x89E3;&#x51B3;&#x4E86;&#x8611;&#x83C7;&#x8857;&#x7684;&#x8FD9;&#x4E24;&#x79CD;&#x7EC4;&#x4EF6;&#x5316;&#x65B9;&#x6848;&#x7684;&#x4E0D;&#x8DB3;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&#x901A;&#x8FC7;&#x6CE8;&#x518C;&#x5C01;&#x88C5;&#x4EF6;<code>connector</code>&#x800C;&#x4E0D;&#x662F;<code>block</code>&#x6765;&#x964D;&#x4F4E;&#x4E86;&#x5185;&#x5B58;&#x5360;&#x7528;&#x3002;</li>
+<li>&#x901A;&#x8FC7;&#x5B57;&#x5178;&#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF0C;&#x89E3;&#x51B3;&#x4E86;<code>url</code>&#x53C2;&#x6570;&#x7684;&#x9650;&#x5236;&#x6027;&#x3002;</li>
+</ol>
+<p><strong>&#x7F3A;&#x70B9;&#xFF1A;</strong></p>
+<ol>
+<li>&#x5185;&#x5B58;&#x4E2D;&#x7EF4;&#x62A4;&#x6620;&#x5C04;&#x8868;&#x3002;</li>
+<li>&#x7EC4;&#x4EF6;&#x672C;&#x8EAB;&#x4F9D;&#x8D56;&#x4E86;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x4E14;&#x5206;&#x6563;&#x6CE8;&#x518C;&#x4F7F;&#x7684;&#x8026;&#x5408;&#x8F83;&#x591A;&#x3002;</li>
+<li>url&#x6CE8;&#x518C;&#x5BF9;&#x4E8E;&#x5B9E;&#x65BD;&#x7EC4;&#x4EF6;&#x5316;&#x662F;&#x5B8C;&#x5168;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x7684;&#xFF0C;&#x67E5;&#x627E; URL &#x7684;&#x5B9E;&#x73B0;&#x4E0D;&#x591F;&#x9AD8;&#x6548;&#x3002;</li>
+<li>&#x8DEF;&#x7531;&#x5199;&#x9519;&#x540E;&#x7F16;&#x8BD1;&#x6CA1;&#x95EE;&#x9898;&#xFF0C;&#x800C;&#x5B9E;&#x73B0;&#x8FD0;&#x884C;&#x5C31;&#x51FA;&#x95EE;&#x9898;&#x4E86;&#xFF0C;&#x4EE5;&#x540E;&#x7EF4;&#x62A4;&#x4E5F;&#x4E0D;&#x65B9;&#x4FBF;&#x3002;</li>
+</ol>
+<p><strong>&#x65B9;&#x6848;&#x56DB;&#x3001;target-action</strong></p>
+<blockquote>
+<p>&#x901A;&#x8FC7;&#x7ED9;&#x7EC4;&#x4EF6;&#x5305;&#x88C5;&#x4E00;&#x5C42;<code>wrapper</code>&#x6765;&#x7ED9;&#x5916;&#x754C;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#x8005;&#x901A;&#x8FC7;&#x4F9D;&#x8D56;&#x4E2D;&#x95F4;&#x4EF6;&#x6765;&#x4F7F;&#x7528;&#x670D;&#x52A1;&#xFF1B;&#x5176;&#x4E2D;&#xFF0C;&#x4E2D;&#x95F4;&#x4EF6;&#x662F;&#x901A;&#x8FC7;<code>runtime</code>&#x6765;&#x8C03;&#x7528;&#x7EC4;&#x4EF6;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x662F;&#x771F;&#x6B63;&#x610F;&#x4E49;&#x4E0A;&#x7684;&#x89E3;&#x8026;&#xFF0C;&#x4E5F;&#x662F;&#x8BE5;&#x65B9;&#x6848;&#x6700;&#x6838;&#x5FC3;&#x7684;&#x5730;&#x65B9;&#x3002;&#x5177;&#x4F53;&#x5B9E;&#x65BD;&#x8FC7;&#x7A0B;&#x662F;&#x7ED9;&#x7EC4;&#x4EF6;&#x5C01;&#x88C5;&#x4E00;&#x5C42;<code>target</code>&#x5BF9;&#x8C61;&#x6765;&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#xFF0C;&#x4E0D;&#x4F1A;&#x5BF9;&#x539F;&#x6765;&#x7EC4;&#x4EF6;&#x9020;&#x6210;&#x5165;&#x4FB5;&#xFF1B;&#x7136;&#x540E;&#xFF0C;&#x901A;&#x8FC7;&#x5B9E;&#x73B0;&#x4E2D;&#x95F4;&#x4EF6;&#x7684;<code>category</code>&#x6765;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x7ED9;&#x8C03;&#x7528;&#x8005;&#xFF0C;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#x8005;&#x53EA;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x800C;&#x7EC4;&#x4EF6;&#x5219;&#x4E0D;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x4E2D;&#x95F4;&#x4EF6;&#x3002;</p>
+</blockquote>
+<p><img src="Chapter1/iOS&#x7EC4;&#x4EF6;&#x5316;&#x65B9;&#x6848;&#x5BF9;&#x6BD4;/taget_action.png" alt="&#x67B6;&#x6784;&#x56FE;"></p>
+<p><strong>&#x4F18;&#x70B9;&#xFF1A;</strong></p>
+<ol>
+<li>&#x5185;&#x5B58;&#x4E2D;&#x4E0D;&#x9700;&#x8981;&#x7EF4;&#x62A4;&#x6620;&#x5C04;&#x8868;&#x3002;</li>
+<li>&#x4E0D;&#x9700;&#x8981;&#x6CE8;&#x518C;&#x3002;</li>
+</ol>
+<p><strong>&#x7F3A;&#x70B9;&#xFF1A;</strong></p>
+<ol>
+<li>&#x4E2D;&#x95F4;&#x4EF6;&#x5B9E;&#x73B0;&#x7E41;&#x7410;&#x3002;</li>
+<li>&#x4E2D;&#x95F4;&#x4EF6;&#x65B9;&#x6CD5;&#x7C7B;&#x578B;&#x3001;&#x53C2;&#x6570;&#x3001;&#x8FD4;&#x56DE;&#x503C;&#x4E0D;&#x591F;&#x7075;&#x6D3B;&#x3002;</li>
+<li>&#x4E2D;&#x95F4;&#x4EF6;&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x6765;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x548C;&#x7C7B;&#xFF0C;&#x8C03;&#x7528;&#x6B7B;&#x677F;&#x3002;</li>
+<li>&#x4E2D;&#x95F4;&#x4EF6;&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x5BB9;&#x6613;&#x5199;&#x9519;&#xFF0C;&#x5199;&#x9519;&#x540E;&#x7F16;&#x8BD1;&#x6CA1;&#x95EE;&#x9898;&#xFF0C;&#x800C;&#x5B9E;&#x73B0;&#x8FD0;&#x884C;&#x5C31;&#x51FA;&#x95EE;&#x9898;&#x4E86;&#xFF0C;&#x4EE5;&#x540E;&#x7EF4;&#x62A4;&#x4E5F;&#x4E0D;&#x65B9;&#x4FBF;&#x3002;</li>
+</ol>
+<p><strong>&#x65B9;&#x6848;&#x4E94;&#x3001;<code>Extension</code>&#x548C;<code>Category</code>&#x7ED3;&#x5408;&#x4F7F;&#x7528;</strong></p>
+<p>&#x4E1C;&#x65B9;&#x8D22;&#x5BCC;&#x6D6A;&#x5BA2;&#x76F4;&#x64AD;&#x7684;&#x4E0D;&#x540C;&#x7EC4;&#x4EF6;&#x63A7;&#x5236;&#x5668;&#x8DF3;&#x8F6C;&#x4F7F;&#x7528;&#x4E86;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x5F0F;&#x662F;&#x6211;&#x4EE5;&#x524D;&#x60F3;&#x51FA;&#x6765;&#x7684;&#x3002;&#x5728;&#x57FA;&#x7840;&#x7EC4;&#x4EF6;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;<code>UIViewController</code> &#x7684;<code>Extension</code>&#x548C;<code>Category</code>&#xFF0C;<code>Extension</code>&#x91CC;&#x9762;&#x5C01;&#x88C5;&#x5404;&#x79CD;&#x7EC4;&#x4EF6;&#x95F4;&#x63A7;&#x5236;&#x5668;&#x8DF3;&#x8F6C;&#x7684;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x91CC;&#x9762;&#x6CA1;&#x6709;&#x5B9E;&#x73B0;&#xFF0C;<code>Category</code>&#x91CC;&#x9762;&#x4E5F;&#x548C;<code>Extension</code>&#x5BF9;&#x5E94;&#x5C01;&#x88C5;&#x76F8;&#x5E94;&#x65B9;&#x6CD5;&#xFF0C;<code>Category</code>&#x6709;&#x5B9E;&#x73B0;&#xFF0C;&#x5185;&#x90E8;&#x662F;&#x8C03;&#x7528;&#x7684;<code>Extension</code>&#x5C01;&#x88C5;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8C03;&#x7528;&#x65F6;&#x5148;&#x5224;&#x65AD;<code>Extension</code>&#x7684;&#x65B9;&#x6CD5;&#x6709;&#x6CA1;&#x6709;&#x5B9E;&#x73B0;&#xFF0C;&#x505A;&#x4E0B;&#x4FDD;&#x62A4;&#x3002;&#x7EC4;&#x4EF6;&#x63A7;&#x5236;&#x5668;&#x8DF3;&#x8F6C;&#x8C03;&#x7528;<code>Category</code>&#x5C01;&#x88C5;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x7EC4;&#x4EF6;&#x8D1F;&#x8D23;&#x5B9E;&#x73B0;<code>Extension</code>&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#x8FD9;&#x79CD;&#x65B9;&#x6848;&#x4E0D;&#x53EA;&#x9002;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x5668;&#x8DF3;&#x8F6C;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x6539;&#x9020;&#x6210;<code>NSObject</code>&#x7684;<code>Extension</code>&#x548C;<code>Category</code>&#xFF0C;&#x9002;&#x5E94;&#x6240;&#x6709;&#x7684;&#x7EC4;&#x4EF6;&#x95F4;&#x901A;&#x4FE1;&#x3002;</p>
+<p><code>Extension</code>&#x65B9;&#x6CD5;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code class="lang-objc"><span class="hljs-class"><span class="hljs-keyword">@interface</span> <span class="hljs-title">UIViewController</span> (<span class="hljs-title">EL</span>)</span>
+
+<span class="hljs-comment">/** &#x53D1;&#x76F4;&#x64AD; **/</span>
+- (<span class="hljs-keyword">void</span>)el_startPushLive:(<span class="hljs-built_in">NSString</span> *_Nullable)liveTitle;
+</code></pre>
+<p><code>Category</code>&#x65B9;&#x6CD5;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code class="lang-objc"><span class="hljs-class"><span class="hljs-keyword">@interface</span> <span class="hljs-title">UIViewController</span> (<span class="hljs-title">elbasic</span>)</span>
+
+<span class="hljs-comment">/** &#x53D1;&#x8D77;&#x76F4;&#x64AD; **/</span>
+- (<span class="hljs-keyword">void</span>)elbasic_startPushLive:(<span class="hljs-built_in">NSString</span> *_Nullable)liveTitle;
+</code></pre>
+<p><code>Category</code>&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-objc"><span class="hljs-class"><span class="hljs-keyword">@implementation</span> <span class="hljs-title">UIViewController</span> (<span class="hljs-title">elbasic</span>)</span>
+<span class="hljs-comment">/** &#x53D1;&#x8D77;&#x76F4;&#x64AD; **/</span>
+- (<span class="hljs-keyword">void</span>)elbasic_startPushLive:(<span class="hljs-built_in">NSString</span> *_Nullable)liveTitle {
+   SEL sel = <span class="hljs-keyword">@selector</span>(el_startPushLive:);
+   <span class="hljs-keyword">if</span> ([<span class="hljs-keyword">self</span> respondsToSelector:sel]) {
+       [<span class="hljs-keyword">self</span> el_startPushLive:liveTitle];
+   }
+}
+</code></pre>
+<p><code>Extension</code>&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-objc"><span class="hljs-class"><span class="hljs-keyword">@implementation</span> <span class="hljs-title">UIViewController</span> ()</span>
+
+<span class="hljs-comment">//&#x53D1;&#x76F4;&#x64AD;</span>
+- (<span class="hljs-keyword">void</span>)el_startPushLive:(<span class="hljs-built_in">NSString</span> *_Nullable)liveTitle {
+   <span class="hljs-built_in">UIViewController</span> *pCtrl = [SBURLAction sb_initCtrl:el_actionurl_push_live(liveTitle)];
+   [<span class="hljs-keyword">self</span> el_presentPushCtrl:pCtrl];
+}
+</code></pre>
+<p>&#x4F18;&#x70B9;&#xFF1A;</p>
+<ol>
+<li><code>Category</code>&#x5B9E;&#x73B0;&#x5185;&#x90E8;&#x505A;&#x4E86;<code>Extension</code>&#x65B9;&#x6CD5;&#x662F;&#x5426;&#x5B9E;&#x73B0;&#x7684;&#x5224;&#x65AD;&#xFF0C;&#x907F;&#x514D;&#x4E86;&#x4E0D;&#x5B9E;&#x73B0;&#x51FA;&#x73B0;&#x7684;&#x5D29;&#x6E83;</li>
+<li>&#x786E;&#x5B9E;&#x89E3;&#x51B3;&#x4E86;&#x65B9;&#x6848;&#x4E00;&#x4E2D;&#x65E0;&#x6CD5;&#x4F20;&#x9012;&#x975E;&#x5E38;&#x89C4;&#x53C2;&#x6570;&#x7684;&#x95EE;&#x9898;</li>
+<li>&#x7EC4;&#x4EF6;&#x95F4;&#x7684;&#x8C03;&#x7528;&#x65B9;&#x4FBF;&#x3002;</li>
+<li>&#x534F;&#x8BAE;&#x65B9;&#x6CD5;&#x6539;&#x53D8;&#x540E;&#xFF0C;&#x7F16;&#x8BD1;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x907F;&#x514D;&#x4EE3;&#x7801;&#x4FEE;&#x6539;&#x9057;&#x6F0F;&#x3002;</li>
+<li>&#x5185;&#x5B58;&#x4E2D;&#x4E0D;&#x9700;&#x8981;&#x7EF4;&#x62A4;&#x6620;&#x5C04;&#x8868;&#x3002;</li>
+</ol>
+<p>&#x7F3A;&#x70B9;&#xFF1A;</p>
+<ol>
+<li><code>Extension</code>&#x548C;<code>Category</code>&#x90FD;&#x5B9A;&#x4E49;&#x4E86;&#x540C;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x76F8;&#x6BD4;<code>protocol-class</code>&#x65B9;&#x6848;&#x4E0D;&#x591F;&#x7B80;&#x6D01;&#x3002;</li>
+<li>&#x65B9;&#x6CD5;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x51B2;&#x7A81;&#xFF0C;&#x90FD;&#x8981;&#x52A0;&#x524D;&#x7F00;&#x3002;</li>
+</ol>
+<p><strong>&#x603B;&#x7ED3;&#xFF1A;</strong></p>
+<blockquote>
+<p>&#x7EC4;&#x4EF6;&#x5316;&#x662F;&#x9879;&#x76EE;&#x67B6;&#x6784;&#x5C42;&#x9762;&#x7684;&#x6280;&#x672F;&#xFF0C;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x9879;&#x76EE;&#x90FD;&#x9002;&#x5408;&#x7EC4;&#x4EF6;&#x5316;&#xFF0C;&#x7EC4;&#x4EF6;&#x5316;&#x4E00;&#x822C;&#x9488;&#x5BF9;&#x7684;&#x662F;&#x5927;&#x4E2D;&#x578B;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x591A;&#x4EBA;&#x5F00;&#x53D1;&#x3002;&#x5982;&#x679C;&#xFF0C;&#x9879;&#x76EE;&#x6BD4;&#x8F83;&#x5C0F;&#xFF0C;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x6BD4;&#x8F83;&#x5C11;&#xFF0C;&#x786E;&#x5B9E;&#x4E0D;&#x592A;&#x9002;&#x5408;&#x7EC4;&#x4EF6;&#x5316;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x65F6;&#x7684;&#x7EC4;&#x4EF6;&#x5316;&#x53EF;&#x80FD;&#x5E26;&#x6765;&#x7684;&#x4E0D;&#x662F;&#x4FBF;&#x6377;&#xFF0C;&#x800C;&#x662F;&#x589E;&#x52A0;&#x4E86;&#x5F00;&#x53D1;&#x7684;&#x5DE5;&#x4F5C;&#x91CF;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x7EC4;&#x4EF6;&#x5316;&#x8FC7;&#x7A0B;&#x4E5F;&#x8981;&#x8003;&#x8651;&#x56E2;&#x961F;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x603B;&#x4E4B;&#xFF0C;&#x6839;&#x636E;&#x76EE;&#x524D;&#x9879;&#x76EE;&#x7684;&#x60C5;&#x51B5;&#x4F5C;&#x51FA;&#x6700;&#x5408;&#x9002;&#x7684;&#x6280;&#x672F;&#x9009;&#x578B;&#x3002;&#x6CA1;&#x6709;&#x6700;&#x597D;&#x7684;&#x6280;&#x672F;&#xFF0C;&#x53EA;&#x6709;&#x6700;&#x5408;&#x9002;&#x7684;&#x6280;&#x672F;&#x3002;</p>
+</blockquote>
 
                                 
                                 </section>
@@ -321,7 +464,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第1节：iOS组件化方案对比","level":"1.3","depth":1,"next":{"title":"第2节：iOS应用程序瘦身的静态库解决方案","level":"1.4","depth":1,"path":"Chapter1/iOS应用程序瘦身的静态库解决方案.md","ref":"Chapter1/iOS应用程序瘦身的静态库解决方案.md","articles":[]},"previous":{"title":"第一章","level":"1.2","depth":1,"path":"Chapter1/iOS杂志.md","ref":"Chapter1/iOS杂志.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter1/iOS组件化方案对比.md","mtime":"2019-05-17T07:12:27.133Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-17T07:42:05.638Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第1节：iOS组件化方案对比","level":"1.3","depth":1,"next":{"title":"第2节：iOS应用程序瘦身的静态库解决方案","level":"1.4","depth":1,"path":"Chapter1/iOS应用程序瘦身的静态库解决方案.md","ref":"Chapter1/iOS应用程序瘦身的静态库解决方案.md","articles":[]},"previous":{"title":"第一章","level":"1.2","depth":1,"path":"Chapter1/iOS杂志.md","ref":"Chapter1/iOS杂志.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter1/iOS组件化方案对比.md","mtime":"2019-05-17T08:17:18.083Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-17T08:17:37.186Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
