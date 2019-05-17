@@ -8,6 +8,7 @@
 * [第4节：iOS线程生命周期的监控](Chapter1/iOS线程生命周期的监控.md)
 * [第5节： iOSWKWebView实现JS与Objective-C交互](Chapter1/iOSWKWebView实现JS与Objective-C交互.md)
 * [第二章](Chapter2/README.md)
+* [第1节：GitBooK使用](Chapter2/NpM_GitBook_Typora_Git.md)
 * [第三章](Chapter3/README.md)
 * [第四章](Chapter4/README.md)
 
