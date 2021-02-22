@@ -9,4 +9,5 @@
 * [3.每个人心里都有一个18岁男友](2021-gu-shi/3.-mei-ge-ren-xin-li-du-you-yi-ge-18-sui-nan-you.md)
 * [4.合不合适](2021-gu-shi/4.-he-bu-he-kuo.md)
 * [5. 朋友结婚了](2021-gu-shi/5.-peng-you-jie-hun-le.md)
+* [6.现在的成年人真的很能忍](2021-gu-shi/6.-xian-zai-de-cheng-nian-ren-zhen-de-hen-neng-ren.md)
 
