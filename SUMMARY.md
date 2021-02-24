@@ -11,4 +11,5 @@
 * [5. 朋友结婚了](2021-gu-shi/5.-peng-you-jie-hun-le.md)
 * [6.现在的成年人真的很能忍](2021-gu-shi/6.-xian-zai-de-cheng-nian-ren-zhen-de-hen-neng-ren.md)
 * [7.特别容易对别人抱有期待](2021-gu-shi/7.-te-bie-rong-yi-dui-bie-ren-bao-you-qi-dai.md)
+* [8.爱情的困局](2021-gu-shi/8.-ai-qing-de-kun-ju.md)
 
