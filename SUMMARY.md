@@ -15,4 +15,5 @@
 * [9.尽全力去工作](2021-gu-shi/9.-jin-quan-li-qu-gong-zuo.md)
 * [10.我遇到过这样一种女生](2021-gu-shi/10.-wo-yu-dao-guo-zhe-yang-yi-zhong-nv-sheng.md)
 * [11.我真是太不适合亲密关系了](2021-gu-shi/11.-wo-zhen-shi-tai-bu-kuo-he-qin-mi-guan-xi-le.md)
+* [12.我这个朋友](2021-gu-shi/12.-wo-zhe-ge-peng-you.md)
 
