@@ -17,4 +17,5 @@
 * [11.我真是太不适合亲密关系了](2021-gu-shi/11.-wo-zhen-shi-tai-bu-kuo-he-qin-mi-guan-xi-le.md)
 * [12.我这个朋友](2021-gu-shi/12.-wo-zhe-ge-peng-you.md)
 * [13.我认为的喜欢大概就是总嫌给他的不够多](2021-gu-shi/13.-wo-ren-wei-de-xi-huan-da-gai-jiu-shi-zong-xian-gei-ta-de-bu-gou-duo.md)
+* [14.恋人之间的最好状态是怎样的？](2021-gu-shi/14.-lian-ren-zhi-jian-de-zui-hao-zhuang-tai-shi-zen-yang-de.md)
 
