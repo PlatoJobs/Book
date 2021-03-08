@@ -21,4 +21,5 @@
 * [15.我喜欢有回应的爱情](2021-gu-shi/15.-wo-xi-huan-you-hui-ying-de-ai-qing.md)
 * [16.我想结婚了](2021-gu-shi/16.-wo-xiang-jie-hun-le.md)
 * [17.付出型人格](2021-gu-shi/17.-fu-chu-xing-ren-ge.md)
+* [18.自己桃花不多的原因](2021-gu-shi/18.-zi-ji-tao-hua-bu-duo-de-yuan-yin.md)
 
