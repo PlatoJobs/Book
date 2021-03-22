@@ -23,4 +23,5 @@
 * [17.付出型人格](2021-gu-shi/17.-fu-chu-xing-ren-ge.md)
 * [18.自己桃花不多的原因](2021-gu-shi/18.-zi-ji-tao-hua-bu-duo-de-yuan-yin.md)
 * [20.怎么样的男孩才值得一辈子托付真心呢](2021-gu-shi/20.-zen-me-yang-de-nan-hai-cai-zhi-de-yi-bei-zi-tuo-fu-zhen-xin-ne.md)
+* [21.你曾因为什么和某人不再联系呢？](2021-gu-shi/21.-ni-ceng-yin-wei-shen-me-he-mou-ren-bu-zai-lian-xi-ne.md)
 
