@@ -25,4 +25,5 @@
 * [20.怎么样的男孩才值得一辈子托付真心呢](2021-gu-shi/20.-zen-me-yang-de-nan-hai-cai-zhi-de-yi-bei-zi-tuo-fu-zhen-xin-ne.md)
 * [21.你曾因为什么和某人不再联系呢？](2021-gu-shi/21.-ni-ceng-yin-wei-shen-me-he-mou-ren-bu-zai-lian-xi-ne.md)
 * [22.你是不是也有过这样的经历？](2021-gu-shi/22.-ni-shi-bu-shi-ye-you-guo-zhe-yang-de-jing-li.md)
+* [23.爱情里，可以不喜欢，但你不可以将就。](2021-gu-shi/23.-ai-qing-li-ke-yi-bu-xi-huan-dan-ni-bu-ke-yi-jiang-jiu.md)
 
